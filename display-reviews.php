@@ -19,7 +19,7 @@ $sql = "SELECT * FROM reviews WHERE itemid='$item'";
 
 $result = mysqli_query($conn, $sql);
 
-if(myqli_num_rows($result) > 0){
+if(mysqli_num_rows($result) > 0){
     while($row = mysqli_fetch_assoc($result)){
         $uname = $row['uname'];
         $propic = "SELECT profpic FROM profiles WHERE uname='$uname';";
